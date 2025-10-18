@@ -16,13 +16,13 @@ Users can modify typography, layout, button styles, colors, and image gallery ap
 
 ### 🎛️ Editor Panel  
 This section lets users customize every design property in real time.  
-![Editor Panel](public/screenshots/editor-panel.png)
+![Editor Panel](public/furniture.jpg)
 
 ---
 
 ### 🧩 Live Preview  
 Instantly reflects all design changes made in the editor.  
-![Live Preview](public/screenshots/live-preview.png)
+![Live Preview](public/furniture.jpg)
 
 ---
 
