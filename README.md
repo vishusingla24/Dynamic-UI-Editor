@@ -22,7 +22,7 @@ This section lets users customize every design property in real time.
 
 ### 🧩 Live Preview  
 Instantly reflects all design changes made in the editor.  
-![Live Preview](public/furniture.jpg)
+![Live Preview](public/photo24.jpg)
 
 ---
 
