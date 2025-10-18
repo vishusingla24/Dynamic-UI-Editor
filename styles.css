@@ -1,0 +1,219 @@
+:root {
+    --bg: #f6f7fb;
+    --panel: #ffffff;
+    --muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    color: #111827;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    gap: 24px;
+    padding: 28px;
+}
+
+.editor {
+    width: 500px;
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(13, 18, 25, 0.06);
+    overflow: auto;
+    max-height: calc(100vh - 56px);
+}
+
+.previewWrap {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
+.preview {
+    width: 720px;
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 14px 40px rgba(13, 18, 25, 0.07);
+}
+
+/* product card */
+.productCard {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* image gallery */
+.gallery {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.gallery.grid-left {
+    justify-content: flex-start;
+}
+
+.gallery.grid-center {
+    justify-content: center;
+}
+
+.gallery.grid-right {
+    justify-content: flex-end;
+}
+
+.gallery img {
+    object-fit: cover;
+}
+
+/* card content */
+.cardContent {
+    padding: 20px;
+}
+
+/* button */
+.ctaBtn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    font-weight: 600;
+}
+
+/* small helpers */
+.label {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.hr {
+    height: 1px;
+    background: #eef0f6;
+    margin: 16px 0;
+    border-radius: 2px
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.input,
+select {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #e6e8f0;
+    width: 100%;
+}
+
+.range {
+    width: 100%
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    border: 1px solid #e6e8f0;
+    cursor: pointer;
+}
+
+.footerButtons {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.codeBox {
+    background: #111827;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 12px
+}
+/* ✅ Responsive Layout for the App */
+
+@media (max-width: 1024px) {
+    .app {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .editor {
+        width: 100%;
+        order: 2;
+        /* Moves editor below preview on smaller screens */
+    }
+
+    .previewWrap {
+        width: 100%;
+        order: 1;
+        /* Moves preview above editor */
+    }
+
+    .preview {
+        width: 100%;
+        padding: 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .editor {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .preview {
+        padding: 12px !important;
+    }
+
+    .gallery img {
+        width: 70px !important;
+        height: 50px !important;
+    }
+
+    .productCard {
+        width: 100% !important;
+    }
+
+    h2,
+    h3 {
+        font-size: 1rem !important;
+    }
+
+    button {
+        padding: 8px 14px !important;
+        font-size: 0.9rem !important;
+    }
+}
