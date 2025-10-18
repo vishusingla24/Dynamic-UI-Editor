@@ -16,7 +16,7 @@ Users can modify typography, layout, button styles, colors, and image gallery ap
 
 ### 🎛️ Editor Panel  
 This section lets users customize every design property in real time.  
-![Editor Panel](public/furniture.jpg)
+![Editor Panel](public/photo56.jpg)
 
 ---
 
