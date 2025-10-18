@@ -1,70 +1,158 @@
-# Getting Started with Create React App
+# 🧩 Dynamic UI Editor for Customizable Designs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **Dynamic UI Editor** built using **React**, allowing users to **customize a furniture-themed UI design** (based on the provided Figma layout) in real-time.  
+Users can modify typography, layout, button styles, colors, and image gallery appearance — all through an interactive editor, with an instant live preview.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+🔗 **Deployed Link:** [https://vishu-dynamic-ui-editor.vercel.app/](https://vishu-dynamic-ui-editor.vercel.app/)  
+🖥️ **Localhost Preview:** [http://localhost:3000](http://localhost:3000)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🖼️ Screenshots
 
-### `npm test`
+### 🎛️ Editor Panel  
+This section lets users customize every design property in real time.  
+![Editor Panel](public/screenshots/editor-panel.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### 🧩 Live Preview  
+Instantly reflects all design changes made in the editor.  
+![Live Preview](public/screenshots/live-preview.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Project Overview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In real-world UI projects, clients and designers frequently request **on-the-fly design customizations** — such as color updates, font changes, or spacing adjustments — without touching the source code.  
 
-### `npm run eject`
+This project simulates that environment by providing a **React-based UI Editor** where all these updates happen dynamically through the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The UI is inspired by a **furniture card layout** that includes:
+- A **main hero image**
+- **Typography customization**
+- **Interactive button styling**
+- **Dynamic gallery**
+- **Two responsive layouts**: *Desktop* and *Compact view*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Features & Functionalities
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### ✨ Typography
+- Change **Font Family** (Roboto, Poppins, Inter)
+- Adjust **Font Weight** (400–700)
+- Set **Font Size** (10–60px)
 
-## Learn More
+### 🎨 Button Customization
+- Border Radius control  
+- Shadow size selection (none / small / medium / large)  
+- Button alignment (left / center / right)  
+- Button background and text color (HEX/RGB input)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🖼️ Gallery / Image Customization
+- Gallery alignment (grid-left / grid-center / grid-right)
+- Image spacing and border radius
+- Live preview of uploaded or linked images
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🧱 General Layout
+- Card corner radius
+- Container padding
+- Section background color
+- Stroke color and stroke width
 
-### Code Splitting
+### 🧭 Layout Switching
+- Switch between **Desktop Layout** and **Compact Layout**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### ⚡ Live Preview
+- All changes appear **instantly** in the preview area without reloading the page
 
-### Analyzing the Bundle Size
+### 🧾 Output
+- Export configuration as JSON for future reuse
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🛠️ Additional Custom Features
+- Zoom In / Zoom Out controls
+- Fullscreen toggle
+- Ruler toggle (for design alignment)
+- Reset / Move control button
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧩 Component API & Configurable Props
 
-### Advanced Configuration
+### 🧠 `PreviewUI` Component
+Renders the live preview of the furniture UI based on the current settings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Prop | Type | Description |
+|------|------|-------------|
+| `fontFamily` | `string` | Sets the font style for headings and text |
+| `fontWeight` | `number` | Controls the thickness of the text |
+| `fontSize` | `number` | Adjusts text size in px |
+| `buttonBg` | `string` | Background color of the button |
+| `buttonText` | `string` | Text color of the button |
+| `buttonRadius` | `number` | Border radius for button corners |
+| `buttonShadow` | `string` | Type of shadow effect applied |
+| `buttonAlign` | `string` | Button alignment (left, center, right) |
+| `galleryAlign` | `string` | Gallery image grid alignment |
+| `imageSpacing` | `number` | Space between images |
+| `imageRadius` | `number` | Image border radius |
+| `cardRadius` | `number` | Rounds the product card corners |
+| `containerPadding` | `number` | Sets padding within card container |
+| `sectionBg` | `string` | Background color for the entire card section |
+| `strokeColor` | `string` | Border/stroke color of card and images |
+| `strokeWeight` | `number` | Stroke thickness in pixels |
+| `layoutMode` | `string` | Determines layout (“desktop” or “compact”) |
+| `images` | `array` | List of image URLs for gallery and preview |
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧰 How the Editor Works
 
-### `npm run build` fails to minify
+1. The editor panel is rendered using **controlled form inputs** in `EditorPanel.jsx`.
+2. Each input updates the `settings` object stored in React state (`useState`).
+3. The updated state is passed as props to the `PreviewUI` component.
+4. The `PreviewUI` immediately re-renders to reflect every change in **real-time**.
+5. All updates happen dynamically — no reload or re-compilation is needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 💡 UX & Design Decisions
+
+### 🎯 Simplicity First
+The editor layout is built to be **intuitive**, with clearly labeled controls and immediate visual feedback.
+
+### 🌈 Real-Time Feedback
+Every design change is instantly visualized using React’s **state-driven rendering** — similar to design tools like Figma or Canva.
+
+### 📱 Responsive Design
+Both the **editor** and **preview** adapt across screen sizes (desktop → mobile).
+
+### 🧩 Modular Architecture
+Each part of the project is divided into reusable React components:
+- `App.js` — Global state handler  
+- `EditorPanel.jsx` — Control panel for customization  
+- `PreviewUI.jsx` — Real-time preview renderer
+
+### 🧭 Creative Enhancements
+- “Live Preview” header for clarity  
+- Added **zoom, ruler, and fullscreen controls**  
+- Designed **two layout modes** for flexibility
+
+---
+
+## 🧑‍💻 Setup Instructions
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/<your-github-username>/dynamic-ui-editor.git
+cd dynamic-ui-editor
+Install dependencies
+npm install
+Run locally
+npm start
+Build for production
+npm run build
